@@ -1,0 +1,350 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    
+    <div class="global">
+
+        <!--header-->
+        <header>
+
+            <div class="header">
+
+                <div class="container">
+
+                    <div class="row">
+
+                        <article class="span12">
+
+                            <div class="row">
+
+                                <article class="span6">
+
+                                    <h1 class="brand">                                        
+                                        {{widget('companyheader', 'companyheader', {"defaultlogo": asset('/images/logo.png')})|raw}}
+                                    </h1>
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+
+                                <article class="span6">
+
+                                    {{widget('navigation', 'navigation', {'align': 'left'})|raw}}
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </article>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--content-->
+
+        <div class="container">
+
+            <div class="row">
+
+                <article class="span12">
+
+                    <div class="row">
+
+                        <article class="span9">
+
+                            {{widget('content', 'title1', {content: '<h2>a few words about us</h2>', lines: 'all'})|raw}}
+
+                            {{widget('image', 'left', { 'src': asset('images/page2-img1.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            <div class="overflow">
+
+                                {{widget('content', 'content-title1', {content: '<h5>Lorem ipsum dolor sit amet consec adipiscing elit praesent</h5>', lines: 'all'})|raw}}
+
+                                {{widget('content', 'title2', {content: '<p>Lorem ipsum dolor sit amet consectetuer adipisc nibh euismod  tincidunt laoreet dolore magna aliquam erat volutpat ut wis enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisisl ualiquipx ea commodo consequat duis autem vel eum iriure dolor in hendrerit.</p><p>In vulputate velit esse mol estie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>', lines: 'all'})|raw}}
+
+                            </div>
+
+                            {{widget('content', 'content-title2', {content: '<p>Lorem ipsum dolor sit amet consectetuer adipisc nibh euismod  tincidunt laoreet dolore magna aliquam erat volutpat ut wis enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortisisl ualiquipx ea commodo consequat duis autem vel eum iriure dolor in hendrerit. In vulputate velit esse mol estie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span3">
+
+                            {{widget('content', 'title2', {content: '<h2>our vision</h2>', lines: 'all'})|raw}}
+
+                            <ul class="drop">
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'drop1', {content: 'a', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'drop-title1', {content: '<h4>Lorem ipsum dolor</h4>', lines: 'all'})|raw}}
+                                        {{widget('content', 'drop-text1', {content: '<p>Lorem ipsum dolor sit amet consectetuer adipisc nibhem euismod  tincidunt laoreet.</p>', lines: 'all'})|raw}}
+                                    </div>
+
+                                </li>
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'drop2', {content: 'b', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'drop-title2', {content: '<h4>Lorem ipsum dolor</h4>', lines: 'all'})|raw}}
+                                        {{widget('content', 'drop-text2', {content: '<p>Lorem ipsum dolor sit amet consectetuer adipisc nibhem euismod  tincidunt laoreet.</p>', lines: 'all'})|raw}}
+                                    </div>
+
+                                </li>
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'drop3', {content: 'c', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'drop-title3', {content: '<h4>Lorem ipsum dolor</h4>', lines: 'all'})|raw}}
+                                        {{widget('content', 'drop-text3', {content: '<p>Lorem ipsum dolor sit amet consectetuer adipisc nibhem euismod  tincidunt laoreet.</p>', lines: 'all'})|raw}}
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                    </div>
+
+                    {{widget('content', 'title3', {content: '<h2>our staff</h2>', lines: 'all'})|raw}}
+
+                    <div class="row staff">
+
+                        <article class="span2">
+
+                            {{widget('image', 'staf1', { 'src': asset('images/staff1.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'staf-title1', {content: '<h4>Mark Johnson</h4>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'staf-text1', {content: '<p>President</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span2">
+
+                            {{widget('image', 'staf2', { 'src': asset('images/staff2.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'staf-title2', {content: '<h4>Jessica Priston</h4>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'staf-text2', {content: '<p>Director of Chefs/Partner</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span2">
+
+                            {{widget('image', 'staf3', { 'src': asset('images/staff3.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'staf-title3', {content: '<h4>Bradley Grosh</h4>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'staf-text3', {content: '<p>Corporate Executive Chef</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span2">
+
+                            {{widget('image', 'staf4', { 'src': asset('images/staff4.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'staf-title4', {content: '<h4>Olivia Johnson</h4>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'staf-text4', {content: '<p>Vice President, Training and Development</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span2">
+
+                            {{widget('image', 'staf5', { 'src': asset('images/staff5.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'staf-title5', {content: '<h4>Linda Smith</h4>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'staf-text5', {content: '<p>Founding Chef/Owner</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span2">
+
+                            {{widget('image', 'staf6', { 'src': asset('images/staff6.jpg'), 'imageWidth': '300px'})|raw}}
+
+                            {{widget('content', 'staf-title6', {content: '<h4>Patrick Pool</h4>', lines: 'all'})|raw}}
+
+                            {{widget('content', 'staf-text6', {content: '<p>Joint Venture Partner</p>', lines: 'all'})|raw}}
+                            
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                    </div>
+
+                    {{widget('content', 'title4', {content: '<h2>our skills</h2>', lines: 'all'})|raw}}
+
+                    <div class="row">
+
+                        <article class="span3">
+
+                            <ul class="drop">
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'skill1', {content: '1', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'skill-title1', {content: '<h4>Lorem psum dolor consectetuer</h4>', lines: 'all'})|raw}}
+                                    </div>
+
+                                    {{widget('content', 'skill-text1', {content: '<p>Lorem ipsum dolor sit amet consec tetuer adipis nibhem euismod  tinci dunt laoreet dolore magna aliquam erat volutpat ut wis enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>', lines: 'all'})|raw}}
+                            
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+                        <article class="span3">
+
+                            <ul class="drop">
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'skill2', {content: '2', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'skill-title2', {content: '<h4>Praesent vestibul molestie lacus</h4>', lines: 'all'})|raw}}
+                                    </div>
+
+                                    {{widget('content', 'skill-text1', {content: '<p>Lorem ipsum dolor sit amet consec tetuer adipis nibhem euismod  tinci dunt laoreet dolore magna aliquam erat volutpat ut wis enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>', lines: 'all'})|raw}}
+                            
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+                        <article class="span3">
+
+                            <ul class="drop">
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'skill3', {content: '3', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'skill-title3', {content: '<h4>Vestibulum iaculis lacinia est</h4>', lines: 'all'})|raw}}
+                                    </div>
+
+                                    {{widget('content', 'skill-text1', {content: '<p>Lorem ipsum dolor sit amet consec tetuer adipis nibhem euismod  tinci dunt laoreet dolore magna aliquam erat volutpat ut wis enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>', lines: 'all'})|raw}}
+                            
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+                        <article class="span3">
+
+                            <ul class="drop">
+
+                                <li>
+
+                                    <span class="drop">{{widget('content', 'skill4', {content: '4', lines: 'all'})|raw}}</span>
+
+                                    <div class="overflow">
+                                        {{widget('content', 'skill-title4', {content: '<h4>Sedut perspiciatis unde omnis</h4>', lines: 'all'})|raw}}
+                                    </div>
+
+                                    {{widget('content', 'skill-text1', {content: '<p>Lorem ipsum dolor sit amet consec tetuer adipis nibhem euismod  tinci dunt laoreet dolore magna aliquam erat volutpat ut wis enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo.</p>', lines: 'all'})|raw}}
+                            
+                                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                                </li>
+
+                            </ul>
+
+                        </article>
+
+                    </div>
+
+                    {{zone('main')|raw}}
+                    
+                    {{widget('space', 'space', {'height': '30'})|raw}}
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!--footer-->
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+
+                <section class="span12">
+
+                    <div class="row">
+
+                        <article class="span8">
+
+                            {{widget('companyname', 'companyname', {"business": "sushi bar"})|raw}}
+                            {{widget('content', 'copyright_copy', {content: '&nbsp;&copy;&nbsp;2013', lines: 'all'})|raw}}
+                            {{widget('content', 'copyright_link', {content: '<a href="#">Privacy Policy</a>', lines: 'all'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                        <article class="span4">
+
+                            {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                            {{widget('space', 'space', {'height': '30'})|raw}}
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+
+    </footer>
+    
+</div>
+
+{% endblock %}
