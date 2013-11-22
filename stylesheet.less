@@ -29,6 +29,13 @@
 @linkColor:             @color-swatch3;
 @linkColorHover:        @dark;
 
+// Social
+// -------------------------
+@socialColor:             #e5e4e4;
+@socialColorHover:        #fffefe;
+@socialBackground:        @color-swatch1;
+@socialBackgroundHover:   #ce4e48;
+
 // Typography
 // -------------------------
 @sansFontFamily:        Arial, Helvetica, sans-serif;
@@ -231,38 +238,36 @@
 
 /*Forms*/
 
-.container{
-  textarea{
-    resize: none;
-  }
-  select, 
-  textarea, 
-  input[type="text"], 
-  input[type="password"], 
-  input[type="datetime"], 
-  input[type="datetime-local"], 
-  input[type="date"], 
-  input[type="month"], 
-  input[type="time"], 
-  input[type="week"], 
-  input[type="number"], 
-  input[type="email"], 
-  input[type="url"], 
-  input[type="search"], 
-  input[type="tel"], 
-  input[type="color"], 
-  .uneditable-input{
-    font-size: 12px;
-    .box-sizing(border-box);
-    box-shadow: none;
-    margin-bottom: 20px !important;
-    color: @dark !important;
-    .transition(all .2s linear);
-    border: 1px solid #f6f0ec !important;
-    &:focus{
-      background: @color-swatch5 !important;
-      color: @color-swatch1 !important;
-    }
+textarea{
+  resize: none;
+}
+select, 
+textarea, 
+input[type="text"], 
+input[type="password"], 
+input[type="datetime"], 
+input[type="datetime-local"], 
+input[type="date"], 
+input[type="month"], 
+input[type="time"], 
+input[type="week"], 
+input[type="number"], 
+input[type="email"], 
+input[type="url"], 
+input[type="search"], 
+input[type="tel"], 
+input[type="color"], 
+.uneditable-input{
+  font-size: 12px;
+  .box-sizing(border-box);
+  box-shadow: none;
+  margin-bottom: 20px !important;
+  color: @dark !important;
+  .transition(all .2s linear);
+  border: 1px solid #f6f0ec !important;
+  &:focus{
+    background: @color-swatch5 !important;
+    color: @color-swatch1 !important;
   }
 }
 
@@ -485,12 +490,31 @@ ul li{
       bottom: 0;
     }
   }
+
+  .content-wrapper{
+    text-align: center;
+    .title{
+      display: block;
+      font-size: @font-swatch1-font-size;
+      font-weight: @font-swatch1-font-weight;
+      line-height: @font-swatch1-line-height;
+      color: @font-swatch1-color;
+      font: 48px/50px @ShojumaruFontFamily;
+      color: @color-swatch6;
+      padding-top: 20px;
+      margin: 0;
+    }
+    .description{}
+  }
+
 }
 
 /*--- header end ------*/
 
 /*------ content ------- */
 
+button.button,
+input.button,
 .btn {
   display: inline-block;
   border: none;
@@ -529,6 +553,7 @@ header, footer, #content{
 
 .gallery-widget{
   margin: 0;
+  overflow: hidden;
   li{
     float: left;
     list-style: none;
@@ -556,38 +581,36 @@ header, footer, #content{
 
 /* end background image */
 
-.container{
-  input, textarea {
-    position: relative;
-    outline: none;
-    border: none;
-    .border-radius(0);
-    .box-shadow(0 0 0);
+input, textarea {
+  position: relative;
+  outline: none;
+  border: none;
+  .border-radius(0);
+  .box-shadow(0 0 0);
 
-    line-height: 20px;
-    color: @textColor;
-    padding: 5px 10px;
-    width: 100%;
-    margin: 0;
-    &:focus {
-      .box-shadow(0 0 0);
-      border: none;
-      background: none;
-    }
-    &:focus:invalid:focus{
-      .box-shadow(0 0 0);
-      border: none;
-      background: none;
-    }
+  line-height: 20px;
+  color: @textColor;
+  padding: 5px 10px;
+  width: 100%;
+  margin: 0;
+  &:focus {
+    .box-shadow(0 0 0);
+    border: none;
+    background: none;
   }
-  input{
-    .size(30px, 100%);   
-    .box-sizing(border-box); 
+  &:focus:invalid:focus{
+    .box-shadow(0 0 0);
+    border: none;
+    background: none;
   }
-  textarea{
-    width: 100%;
-    .box-sizing(border-box); 
-  }
+}
+input{
+  .size(30px, 100%);   
+  .box-sizing(border-box); 
+}
+textarea{
+  width: 100%;
+  .box-sizing(border-box); 
 }
 
 p {
@@ -630,38 +653,6 @@ h1{
   color: @font-swatch1-color;
   font: 48px/50px @ShojumaruFontFamily;
   color: @color-swatch6;
-  &.brand{
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    .companyheader{
-      display: inline-block;
-    }
-    a{
-      color: @color-swatch3;
-      text-decoration: none;
-      position: relative;
-      &:hover{
-        color: @color-swatch1;
-      }
-      .logo{
-        margin: 0px;
-        font-size: 0;
-        line-height: 0;
-        img{
-          display: block;
-        }
-        a{
-          display: inline-block;
-        }   
-      }
-      .company-name{
-        font: 10px/12px Arial, Helvetica, sans-serif;
-        text-align: right;
-        color: #686868;
-      }
-    }   
-  }
 }
 
 h2{
@@ -986,6 +977,68 @@ div[id$="copyright_link"]{
   }
 }
 
+.twitter{
+  ul.twitter{
+    margin: 0;
+    li{
+      list-style: none;
+      margin-bottom: 18px;
+      overflow: hidden;
+      .twitter-profile-pic{
+        float: left;
+        margin-right: 20px;
+      }
+      .twitter-content{
+        p{
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.widget.tweet {
+   padding: 14px 0;
+   a {
+    padding: 8px 10px 8px 32px;
+    margin: 0;
+    border: 1px solid #057ed0;
+    background-image: image('/images/twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+    margin: 0em;
+    .border-radius(4px);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    font-size:.9em;
+    background-color: #32bbef;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    &:hover, &:active {
+      border: 1px solid #096eb3;
+      background-color: #2cacdc;
+    }
+  }
+}
+
+.widget.clicktocall a {
+  background-image: image('/images/ic-call.png');
+  background-color: @color-swatch3;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 38px;
+  margin: 0;
+  color: @color-swatch1;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  &:hover {
+    background-color: @color-swatch2;
+    text-decoration: none;
+  }
+}
+
 .socialicons{
   overflow: hidden;
   .icons {
@@ -1089,9 +1142,6 @@ div[id$="copyright_link"]{
 /* Narrow desktop */
 @media (max-width: 980px) {
 
-  h1.brand .companyheader {
-    display: block;
-  }
   .navigation ul li a {
     font-size: 12px !important;
   }
@@ -1111,12 +1161,6 @@ div[id$="copyright_link"]{
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px){
 
-  h1.brand{
-    text-align: center;
-    .companyheader {
-      display: inline-block;
-    }
-  }
   .navigation ul {
     margin: 0px !important;
     text-align: center !important;
@@ -1156,11 +1200,6 @@ div[id$="copyright_link"]{
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-  h1.brand{
-    .companyheader {
-      display: block;
-    }
-  }
   ul.services li {
     display: block;
     float: none;
